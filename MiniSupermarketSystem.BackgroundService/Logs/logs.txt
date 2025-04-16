@@ -1,0 +1,30 @@
+2025-04-13 16:26:17.880 +01:00 [INF] Inventory Background Service is starting
+2025-04-13 16:26:21.952 +01:00 [INF] Checking inventory levels...
+2025-04-13 16:26:26.360 +01:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-13 16:26:34.406 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-13 16:26:34.409 +01:00 [INF] Hosting environment: Development
+2025-04-13 16:26:34.414 +01:00 [INF] Content root path: C:\Users\USER\Desktop\MiniSupermarketSystem.API\MiniSupermarketSystem.BackgroundService
+2025-04-13 16:26:35.729 +01:00 [INF] Executed DbCommand (313ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[QuantityInStock]
+FROM [Products] AS [p]
+2025-04-13 16:26:36.479 +01:00 [WRN] Low stock alert: Product Organic Apples has only 4 units left (threshold: 5)
+2025-04-13 16:34:37.400 +01:00 [INF] Inventory Background Service is starting
+2025-04-13 16:34:39.763 +01:00 [INF] Checking inventory levels...
+2025-04-13 16:34:43.857 +01:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-13 16:34:48.592 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-13 16:34:48.611 +01:00 [INF] Hosting environment: Development
+2025-04-13 16:34:48.638 +01:00 [INF] Content root path: C:\Users\USER\Desktop\MiniSupermarketSystem.API\MiniSupermarketSystem.BackgroundService
+2025-04-13 16:34:50.148 +01:00 [INF] Executed DbCommand (324ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[QuantityInStock]
+FROM [Products] AS [p]
+2025-04-13 16:34:51.221 +01:00 [WRN] Low stock alert: Product Organic Apples has only 4 units left (threshold: 5)
+2025-04-13 16:44:14.550 +01:00 [INF] Inventory Background Service is starting
+2025-04-13 16:44:16.344 +01:00 [INF] Checking inventory levels...
+2025-04-13 16:44:20.688 +01:00 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-04-13 16:44:25.139 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-13 16:44:25.563 +01:00 [INF] Hosting environment: Development
+2025-04-13 16:44:25.566 +01:00 [INF] Content root path: C:\Users\USER\Desktop\MiniSupermarketSystem.API\MiniSupermarketSystem.BackgroundService
+2025-04-13 16:44:26.574 +01:00 [INF] Executed DbCommand (423ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[Name], [p].[Price], [p].[QuantityInStock]
+FROM [Products] AS [p]
+2025-04-13 16:44:27.140 +01:00 [WRN] Low stock alert: Product Organic Apples has only 4 units left (threshold: 5)

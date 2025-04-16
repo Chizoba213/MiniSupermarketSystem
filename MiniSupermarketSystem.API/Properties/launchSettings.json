@@ -1,0 +1,41 @@
+﻿{
+    "$schema": "http://json.schemastore.org/launchsettings.json",
+    "iisSettings": {
+        "windowsAuthentication": false,
+        "anonymousAuthentication": true,
+        "iisExpress": {
+            "applicationUrl": "http://localhost:16744",
+            "sslPort": 44334
+        }
+    },
+    "profiles": {
+        "http": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": true,
+            "launchUrl": "swagger", // Swagger should load on startup
+            "applicationUrl": "http://localhost:5105", // Ensure this matches what you want for HTTP
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        "https": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": true,
+            "launchUrl": "swagger", // Swagger should load on startup
+            "applicationUrl": "https://localhost:7235", // Ensure this matches what you want for HTTPS
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        "IIS Express": {
+            "commandName": "IISExpress",
+            "launchBrowser": true,
+            "launchUrl": "swagger", // Swagger should load on startup
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    }
+}

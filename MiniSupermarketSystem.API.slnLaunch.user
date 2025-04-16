@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "MiniSupermarketSystem.API\\MiniSupermarketSystem.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MiniSupermarketSystem.ConsoleApp\\MiniSupermarketSystem.ConsoleApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

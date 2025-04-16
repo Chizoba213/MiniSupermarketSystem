@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "AFUjwiqP25vMdeOR59CIre84bt4jDDbL2zV3g4GYua4=",
+  "Source": "MiniSupermarketSystem.API",
+  "BasePath": "_content/MiniSupermarketSystem.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

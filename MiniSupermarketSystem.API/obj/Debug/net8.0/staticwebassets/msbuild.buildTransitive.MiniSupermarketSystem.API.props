@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MiniSupermarketSystem.API.props" />
+</Project>

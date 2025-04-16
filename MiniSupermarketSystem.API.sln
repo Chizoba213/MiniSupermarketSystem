@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSupermarketSystem.API", "MiniSupermarketSystem.API\MiniSupermarketSystem.API.csproj", "{4F50F13B-D4A6-40AE-92CC-53A3A67E8A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSupermarketSystem.Application", "MiniSupermarketSystem.Application\MiniSupermarketSystem.Application.csproj", "{E179BA90-C99F-4E8F-B534-EAAC906CBBA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSupermarketSystem.Domain", "MiniSupermarketSystem.Domain\MiniSupermarketSystem.Domain.csproj", "{1456CB46-0EDF-49AC-9BCB-9D2E240A5095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSupermarketSystem.Infrastructure", "MiniSupermarketSystem.Infrastructure\MiniSupermarketSystem.Infrastructure.csproj", "{A587936D-8703-418A-B2D3-A2E76E9065DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSupermarketSystem.ConsoleApp", "MiniSupermarketSystem.ConsoleApp\MiniSupermarketSystem.ConsoleApp.csproj", "{92B63617-9429-493D-AEB8-675DE3386287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSupermarketSystem.BackgroundService", "MiniSupermarketSystem.BackgroundService\MiniSupermarketSystem.BackgroundService.csproj", "{8CCAA0F2-541D-4AA9-AA5B-638A6C645C27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F50F13B-D4A6-40AE-92CC-53A3A67E8A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F50F13B-D4A6-40AE-92CC-53A3A67E8A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F50F13B-D4A6-40AE-92CC-53A3A67E8A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F50F13B-D4A6-40AE-92CC-53A3A67E8A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E179BA90-C99F-4E8F-B534-EAAC906CBBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E179BA90-C99F-4E8F-B534-EAAC906CBBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E179BA90-C99F-4E8F-B534-EAAC906CBBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E179BA90-C99F-4E8F-B534-EAAC906CBBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1456CB46-0EDF-49AC-9BCB-9D2E240A5095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1456CB46-0EDF-49AC-9BCB-9D2E240A5095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1456CB46-0EDF-49AC-9BCB-9D2E240A5095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1456CB46-0EDF-49AC-9BCB-9D2E240A5095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A587936D-8703-418A-B2D3-A2E76E9065DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A587936D-8703-418A-B2D3-A2E76E9065DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A587936D-8703-418A-B2D3-A2E76E9065DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A587936D-8703-418A-B2D3-A2E76E9065DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B63617-9429-493D-AEB8-675DE3386287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B63617-9429-493D-AEB8-675DE3386287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B63617-9429-493D-AEB8-675DE3386287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B63617-9429-493D-AEB8-675DE3386287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCAA0F2-541D-4AA9-AA5B-638A6C645C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCAA0F2-541D-4AA9-AA5B-638A6C645C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCAA0F2-541D-4AA9-AA5B-638A6C645C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCAA0F2-541D-4AA9-AA5B-638A6C645C27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
