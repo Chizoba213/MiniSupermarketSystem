@@ -15,6 +15,8 @@ namespace MiniSupermarketSystem.Application.Order.Dtos
         public string BankName { get; set; }
         public string BankAccountName { get; set; }
         public string BankAccountNumber { get; set; }
+        public DateTime PaymentDate { get; set; }
         public List<OrderDetailDto> OrderDetails { get; set; }
+        public decimal AmountPaid { get; set; }
     }
 }

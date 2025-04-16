@@ -1,6 +1,7 @@
 ﻿namespace MiniSupermarketSystem.API.Controllers;
 using System.Text.Json;
 using MediatR;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using MiniSupermarketSystem.Application.Orders.Command;
 
@@ -24,34 +25,59 @@ public class PaymentWebhookController : ControllerBase
     {
         using var reader = new StreamReader(Request.Body);
         var rawBody = await reader.ReadToEndAsync();
-        _logger.LogInformation($"Response from notification: {rawBody}");
+        _logger.LogInformation("Received payment notification: {RawBody}", rawBody);
 
         try
         {
-            var json = JsonDocument.Parse(rawBody);
+            using var json = JsonDocument.Parse(rawBody);
             var root = json.RootElement;
 
-            var reference = root.GetProperty("transaction_reference").GetString();
-            var status = root.GetProperty("status").GetString(); // "completed", "failed", etc.
+            if (!root.TryGetProperty("TransactionResponseMessage", out var statusProp) ||
+                !root.TryGetProperty("DestinationAccountNumber", out var referenceProp) ||
+                !root.TryGetProperty("Amount", out var amountProp))
+            {
+                _logger.LogWarning("Missing required fields in payment notification");
+                return BadRequest(new { Error = "Missing required fields: TransactionResponseMessage, DestinationAccountNumber, Amount" });
+            }
 
-            await _mediator.Send(new VerifyPaymentCommand(reference, status));
+            if (!amountProp.TryGetDecimal(out decimal amountPaid) || amountPaid <= 0)
+            {
+                _logger.LogWarning("Invalid amount value: {Amount}", amountProp.ToString());
+                return BadRequest(new { Error = "Amount must be a positive decimal number" });
+            }
 
-            return Ok(new { Message = "Status updated successfully" });
+            var statusMessage = statusProp.GetString();
+            var reference = referenceProp.GetString();
+
+            if (string.Equals(statusMessage, "Successful", StringComparison.OrdinalIgnoreCase))
+            {
+                _logger.LogInformation("Processing successful payment for reference: {Reference}, Amount: {Amount}",
+                    reference, amountPaid);
+
+                
+                await _mediator.Send(new VerifyPaymentCommand(reference, "completed", amountPaid));
+                _logger.LogInformation("Successfully processed payment notification for {Reference}", reference);
+
+                return Ok(new
+                {
+                    Message = "Notification processed successfully",
+                    Reference = reference,
+                    Amount = amountPaid
+                });
+            }
+
+            _logger.LogInformation("Ignoring non-successful payment status: {Status}", statusMessage);
+            return Ok(new { Message = "Non-successful status ignored", Status = statusMessage });
         }
         catch (JsonException ex)
         {
-            _logger.LogError(ex, "Invalid JSON payload");
-            return BadRequest("Invalid JSON format");
-        }
-        catch (KeyNotFoundException ex)
-        {
-            _logger.LogWarning(ex.Message);
-            return NotFound(ex.Message);
+            _logger.LogError(ex, "Failed to parse payment notification JSON");
+            return BadRequest(new { Error = "Invalid JSON format" });
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error processing payment notification");
-            return StatusCode(500, "Internal server error");
+            _logger.LogError(ex, "Unexpected error processing payment notification");
+            return StatusCode(500, new { Error = "Internal server error" });
         }
     }
 }

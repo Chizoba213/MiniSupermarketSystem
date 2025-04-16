@@ -30,6 +30,9 @@ namespace MiniSupermarketSystem.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal>("AmountPaid")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("BankAccountNumber")
                         .HasColumnType("nvarchar(max)");
 
@@ -138,7 +141,7 @@ namespace MiniSupermarketSystem.Infrastructure.Migrations
                         {
                             Id = 1,
                             MerchantId = "Izu12",
-                            PasswordHash = "$2a$11$D2/vBXoGnbtfGtY.AGAehu1oRtcemMfffTHX.W2R1.yRVwpnGlXr2",
+                            PasswordHash = "$2a$11$L9yUysb83/yJKjnXiAqWOezTFf7dDo/pnpNw0OaQw6ke2lI8eVQaC",
                             TerminalId = "Izu123",
                             Username = "Izu"
                         },
@@ -146,7 +149,7 @@ namespace MiniSupermarketSystem.Infrastructure.Migrations
                         {
                             Id = 2,
                             MerchantId = "MC12",
-                            PasswordHash = "$2a$11$Dxm/AlgN01d06geXd9vNXOk9CdI9wyKcxtnzx7lSGsKibTKMIG5iq",
+                            PasswordHash = "$2a$11$sNS7fqKJbUakF.XsXNJAzucOk/D.M1Eg1vnAlKHoOdzMmBhnmHL3K",
                             TerminalId = "TM45",
                             Username = "Chizoba"
                         });

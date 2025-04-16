@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using MiniSupermarketSystem.Domain.Interfaces.IRepositories;
 
-public record VerifyPaymentCommand(string TransactionReference, string NewStatus) : IRequest;
+public record VerifyPaymentCommand(string AccountNumber, string NewStatus, decimal AmountPaid) : IRequest;
 
 public class VerifyPaymentCommandHandler : IRequestHandler<VerifyPaymentCommand>
 {
@@ -20,20 +20,22 @@ public class VerifyPaymentCommandHandler : IRequestHandler<VerifyPaymentCommand>
 
     public async Task Handle(VerifyPaymentCommand request, CancellationToken cancellationToken)
     {
-        var order = await _orderRepository.GetOrderByReferenceAsync(request.TransactionReference);
+        var order = await _orderRepository.GetOrderByAccountNumberAsync(request.AccountNumber);
 
         if (order == null)
         {
-            _logger.LogWarning("Order not found for reference: {Reference}", request.TransactionReference);
-            throw new KeyNotFoundException($"Order with reference {request.TransactionReference} not found");
+            _logger.LogWarning("Order not found for reference: {Reference}", request.AccountNumber);
+            throw new KeyNotFoundException($"Order with reference {request.AccountNumber} not found");
         }
 
         order.PaymentStatus = request.NewStatus;
+        order.AmountPaid = request.AmountPaid;
         order.PaymentDate = DateTime.UtcNow;
 
         await _orderRepository.UpdateAsync(order);
 
         _logger.LogInformation("Updated payment status for {Reference} to {Status}",
-            request.TransactionReference, request.NewStatus);
+            request.AccountNumber, request.NewStatus);
     }
+
 }

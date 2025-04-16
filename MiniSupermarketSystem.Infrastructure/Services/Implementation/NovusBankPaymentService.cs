@@ -116,6 +116,7 @@ public class NovusBankPaymentService : IPaymentService
             var authRequest = new
             {
                 Username = _settings.NovusBank.Username,
+                Password = _settings.NovusBank.Password,
                 TerminalId = _settings.NovusBank.TerminalId
             };
 

@@ -13,5 +13,6 @@ namespace MiniSupermarketSystem.Domain.Interfaces.IRepositories
         Task<Order> GetOrderByReferenceAsync(string reference);
         Task UpdateOrderPaymentStatusAsync(string reference, string status);
         Task UpdateAsync(Order order);
+        Task<Order> GetOrderByAccountNumberAsync(string accountno);
     }
 }

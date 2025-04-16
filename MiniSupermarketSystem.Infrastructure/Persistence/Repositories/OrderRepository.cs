@@ -20,12 +20,13 @@ namespace MiniSupermarketSystem.Infrastructure.Persistence.Repositories
             return order;
         }
 
-        public async Task<Order> GetOrderByReferenceAsync(string reference) =>
-            await _context.Orders
+        public async Task<Order> GetOrderByReferenceAsync(string reference)
+        {
+            return await _context.Orders
                 .Include(o => o.OrderDetails)
                 .ThenInclude(od => od.Product)
                 .FirstOrDefaultAsync(o => o.TransactionReference == reference);
-
+        }
         public async Task UpdateOrderPaymentStatusAsync(string reference, string status)
         {
             var order = await GetOrderByReferenceAsync(reference);
@@ -40,6 +41,19 @@ namespace MiniSupermarketSystem.Infrastructure.Persistence.Repositories
         {
             _context.Orders.Update(order);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<Order> GetOrderByAccountNumberAsync(string accountno)
+        {
+            if (string.IsNullOrWhiteSpace(accountno))
+            {
+                throw new ArgumentException("Account number cannot be empty", nameof(accountno));
+            }
+
+            return await _context.Orders
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefaultAsync(o => o.BankAccountNumber == accountno);
         }
     }
 }

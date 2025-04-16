@@ -172,12 +172,15 @@ C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\b
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Humanizer.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\MediatR.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -325,6 +328,3 @@ C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\o
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\obj\Debug\net8.0\MiniSupermarketSystem.API.pdb
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\obj\Debug\net8.0\MiniSupermarketSystem.API.genruntimeconfig.cache
 C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\obj\Debug\net8.0\ref\MiniSupermarketSystem.API.dll
-C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\USER\Desktop\Projects\MiniSupermarketSystem\MiniSupermarketSystem.API\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniSupermarketSystem.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8f382540a128b3004fcb458425790c8f508bcf5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bb2072bb522d1fdd8c6daa7cf79d2db63ab14fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniSupermarketSystem.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniSupermarketSystem.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

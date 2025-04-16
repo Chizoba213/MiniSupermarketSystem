@@ -207,6 +207,9 @@ class Program
         Console.WriteLine($"Date: {order.OrderDate}");
         Console.WriteLine($"Status: {order.PaymentStatus}");
         Console.WriteLine($"Total: {order.TotalAmount:C}");
+        Console.WriteLine($"PaymnetDate: {order.PaymentDate}");
+        Console.WriteLine($"Amount Paid: {order.AmountPaid:C}");
+
 
         Console.WriteLine("\nItems:");
         foreach (var item in order.OrderDetails)

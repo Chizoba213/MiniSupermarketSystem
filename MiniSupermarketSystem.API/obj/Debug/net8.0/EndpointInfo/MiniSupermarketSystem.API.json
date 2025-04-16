@@ -426,12 +426,20 @@
             "type": "string",
             "nullable": true
           },
+          "paymentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
           "orderDetails": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/OrderDetailDto"
             },
             "nullable": true
+          },
+          "amountPaid": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

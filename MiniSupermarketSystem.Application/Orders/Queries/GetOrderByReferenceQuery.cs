@@ -37,6 +37,8 @@ public class GetOrderByReferenceQueryHandler : IRequestHandler<GetOrderByReferen
                 TotalAmount = order.TotalAmount,
                 PaymentStatus = order.PaymentStatus,
                 BankAccountNumber = order.BankAccountNumber,
+                AmountPaid = order.AmountPaid,
+                PaymentDate = order.PaymentDate,
                 OrderDetails = order.OrderDetails.Select(od => new OrderDetailDto
                 {
                     ProductId = od.ProductId,

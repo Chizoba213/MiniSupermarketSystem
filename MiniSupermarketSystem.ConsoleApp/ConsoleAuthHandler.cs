@@ -33,7 +33,7 @@ public class ConsoleAuthHandler
             var token = authResponse.Token; // Just the raw token string
 
             // Store in cache
-            _cache.Set("auth_token", token, TimeSpan.FromMinutes(5)); // Match token expiry
+            _cache.Set("auth_token", token, TimeSpan.FromMinutes(20)); // Match token expiry
 
             return true;
         }
